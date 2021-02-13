@@ -12,6 +12,11 @@ namespace _122_Analysis_StockRise
 {
     public partial class 騰落率分析 : Form
     {
+        int ave_frame;
+        ave_frame = 25;     //初期値は25日//
+
+
+
         //入力する配列定義
         string[,] File1cont = new string[300, 10000];
         string[,] File2cont = new string[300, 10000];
@@ -239,17 +244,34 @@ namespace _122_Analysis_StockRise
         private void Compute_Button_Click(object sender, EventArgs e)
         {
 
+            int i;
+            int j;
+            int k;
+            i = 0;
+            j = 0;
+            k = 0;
 
             //
             //前区間平均算出
             //
-            double ABE_B;
+            double AVE_B;
+
+            for(j = 0; j <= ave_frame; ++j)
+            {
+                AVE_B ＝ AVE_B + //株価//;
+            }
+            AVE_B = AVE_B / j;
 
             //
             //後区間平均算出
             //
-            double ABE_A;
+            double AVE_A;
 
+            for (j = 0; j <= ave_frame; ++j)
+            {
+                AVE_A ＝ AVE_A + //株価//;
+            }
+            AVE_A = AVE_A / j;
 
         }
 
@@ -353,7 +375,7 @@ namespace _122_Analysis_StockRise
 
         private void Ave_frames_Box_TextChanged(object sender, EventArgs e)
         {
-
+            ave_frame = Ave_frames_Box.TextChanged;
         }
     }
 }
