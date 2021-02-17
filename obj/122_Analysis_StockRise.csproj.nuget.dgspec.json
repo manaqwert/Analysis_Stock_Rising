@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Manabu MyDocuments\\OneDrive\\Source\\200_GitHub\\122_騰落率分析\\Analysis_Stock_Rising\\122_Analysis_StockRise.csproj": {}
+    "C:\\Data\\OneDrive\\Source\\200_GitHub\\122_騰落率分析\\Analysis_Stock_Rising\\122_Analysis_StockRise.csproj": {}
   },
   "projects": {
-    "D:\\Manabu MyDocuments\\OneDrive\\Source\\200_GitHub\\122_騰落率分析\\Analysis_Stock_Rising\\122_Analysis_StockRise.csproj": {
+    "C:\\Data\\OneDrive\\Source\\200_GitHub\\122_騰落率分析\\Analysis_Stock_Rising\\122_Analysis_StockRise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Manabu MyDocuments\\OneDrive\\Source\\200_GitHub\\122_騰落率分析\\Analysis_Stock_Rising\\122_Analysis_StockRise.csproj",
+        "projectUniqueName": "C:\\Data\\OneDrive\\Source\\200_GitHub\\122_騰落率分析\\Analysis_Stock_Rising\\122_Analysis_StockRise.csproj",
         "projectName": "122_Analysis_StockRise",
-        "projectPath": "D:\\Manabu MyDocuments\\OneDrive\\Source\\200_GitHub\\122_騰落率分析\\Analysis_Stock_Rising\\122_Analysis_StockRise.csproj",
-        "packagesPath": "C:\\Users\\Manaf\\.nuget\\packages\\",
-        "outputPath": "D:\\Manabu MyDocuments\\OneDrive\\Source\\200_GitHub\\122_騰落率分析\\Analysis_Stock_Rising\\obj\\",
+        "projectPath": "C:\\Data\\OneDrive\\Source\\200_GitHub\\122_騰落率分析\\Analysis_Stock_Rising\\122_Analysis_StockRise.csproj",
+        "packagesPath": "C:\\Users\\Manabu Fujita\\.nuget\\packages\\",
+        "outputPath": "C:\\Data\\OneDrive\\Source\\200_GitHub\\122_騰落率分析\\Analysis_Stock_Rising\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Manaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Manabu Fujita\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
