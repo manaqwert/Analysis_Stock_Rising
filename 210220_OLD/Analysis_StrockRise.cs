@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace _122_Analysis_StockRise
 {
-    public partial class 騰落率分析 : Form
+    public partial class Analysis_StrockRise : Form
     {
         int ave_frame = 25; //初期値は25日//
-        double rise_fall_rate = 10;
+        double rise_fall_rate = 0;
 
         //入力する配列定義
         string[,] File1cont = new string[300, 10000];
@@ -32,7 +32,7 @@ namespace _122_Analysis_StockRise
         string dname;
 
 
-        public 騰落率分析()
+        public Analysis_StrockRise()
         {
             InitializeComponent();
         }
@@ -76,7 +76,6 @@ namespace _122_Analysis_StockRise
             string[,] in_data_file_temp = new string[370, 10000];
             string[,] in_data_file = new string[370, 10000];
 
-            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             System.IO.StreamReader sr = new System.IO.StreamReader(dname, Encoding.GetEncoding("Shift_JIS"));
 
             for (days = 1; days <= 369; days++)
@@ -132,7 +131,7 @@ namespace _122_Analysis_StockRise
                 }
             }
 
-            ListBox.Items.Add("dname = " + dname + ", days3 = " + days3 + ", days2 = " + days2 + ", ");
+            ListBox.Items.Add("178行目 dname = " + dname + ", days3 = " + days3 + ", days2 = " + days2 + ", ");
 
 
             //days2は年初から年末までの営業日数
@@ -150,7 +149,6 @@ namespace _122_Analysis_StockRise
                 }
                 else
                 {
-                    in_data_file[(int)n2, 0] = in_data_file_temp[(int)n2, 0];
                 }
 
                 days4 = days4 + 1;
@@ -200,7 +198,7 @@ namespace _122_Analysis_StockRise
 
 
 
-        private void 騰落率分析_Load(object sender, EventArgs e)
+        private void Analyss_StockRise_Load(object sender, EventArgs e)
         {
 
         }
@@ -225,27 +223,24 @@ namespace _122_Analysis_StockRise
             //
             //読み込んだファイルの個数に従い、計算用配列の日数を設定
             //
-            if(File1_Sel_Box.Text == "File1")
+            if(File1cont == null)
             {
-                file1notnull = 0;
             }
             else
             {
                 totaldays = totaldays + 300;
                 file1notnull = 1;
             }
-            if (File2_Sel_Box.Text == "File2")
+            if (File2cont == null)
             {
-                file2notnull = 0;
             }
             else
             {
                 totaldays = totaldays + 300;
                 file2notnull = 1;
             }
-            if (File3_Sel_Box.Text == "File3")
+            if (File3cont == null)
             {
-                file3notnull = 0;
             }
             else
             {
@@ -262,14 +257,14 @@ namespace _122_Analysis_StockRise
 
             if (file1notnull == 1)
             {
-                for (l = 0; l <= 300; ++l)
+                for(l = 0; l <= 300; ++l)
                 {
-                    for (stocknum = 0; stocknum < 10000; ++stocknum)
+                    for(stocknum = 0; stocknum <= 10000; ++stocknum)
                     {
                         ComputeFile[l, stocknum] = File1cont[l, stocknum];
+                        ComputeFilerow = ComputeFilerow + File1row;
                     }
                 }
-                ComputeFilerow = ComputeFilerow + File1row;
             }
             else
             {
@@ -278,12 +273,12 @@ namespace _122_Analysis_StockRise
             {
                 for (l = 0; l <= 300; ++l)
                 {
-                    for (stocknum = 0; stocknum < 10000; ++stocknum)
+                    for (stocknum = 0; stocknum <= 10000; ++stocknum)
                     {
                         ComputeFile[l + File1row + 7, stocknum] = File2cont[l + 7, stocknum];
+                        ComputeFilerow = ComputeFilerow + File2row;
                     }
                 }
-                ComputeFilerow = ComputeFilerow + File2row;
             }
             else
             {
@@ -292,36 +287,25 @@ namespace _122_Analysis_StockRise
             {
                 for (l = 0; l <= 300; ++l)
                 {
-                    for (stocknum = 0; stocknum < 10000; ++stocknum)
+                    for (stocknum = 0; stocknum <= 10000; ++stocknum)
                     {
                         ComputeFile[l + File1row + 7 + File2row + 7, stocknum] = File3cont[l + 7, stocknum];
+                        ComputeFilerow = ComputeFilerow + File3row;
                     }
                 }
-                ComputeFilerow = ComputeFilerow + File3row;
             }
             else
             {
             }
 
-            //
-            //算出条件書き出し
-            //
-            ListBox.Items.Add(Convert.ToString(ComputeFilerow) + "日, " + Convert.ToString(ave_frame) + "日, " + Convert.ToString(rise_fall_rate) + "%, ");
-
+            double AVE_B = 0;
+            double AVE_A = 0;
             double endofaveframe = 0;
             double AVE_ratio = 0;
 
-            double AVE_B = 0;
-            double AVE_A = 0;
-
-            double d;
-
-            for (stocknum = 1; stocknum < 10000; ++stocknum)
+            for (stocknum = 1; stocknum <= 10000; ++stocknum)
             {
-                endofaveframe = 0;
-                AVE_ratio = 0;
-
-                for (i = 7; i <= ComputeFilerow + 7; ++i)
+                for(i = 7; i <= ComputeFilerow + 7; ++i)
                 {
                     if(ComputeFile[i, stocknum] != null)
                     {
@@ -330,33 +314,16 @@ namespace _122_Analysis_StockRise
                         //
                         for (j = 0; j < ave_frame; ++j)
                         {
-                            AVE_B = 0;
-
                             if (i - j <= 7)
                             {
-                                //
-                                //最初の７行はヘッダなので処理しない
-                                //
                             }
                             else if (i - j <= ComputeFilerow)
                             {
-                                if (double.TryParse(ComputeFile[i + j, stocknum], out d))
-                                {
-                                    AVE_B = AVE_B + Convert.ToDouble(ComputeFile[i + j, stocknum]);//株価//;
-                                    endofaveframe = endofaveframe + 1;
-                                }
-                                else
-                                {
-                                    //
-                                    //株価が空欄の場合は何もしない
-                                    //
-                                }
+                                AVE_B = AVE_B + Convert.ToDouble(ComputeFile[i - j, stocknum]);//株価//;
+                                endofaveframe = endofaveframe + 1;
                             }
                             else
                             {
-                                //
-                                //後ろ側の値がない区間に入ったら処理しない
-                                //
                             }
                         }
                         AVE_B = AVE_B / endofaveframe;
@@ -366,33 +333,16 @@ namespace _122_Analysis_StockRise
                         //
                         for (j = ave_frame; j < 2 * ave_frame; ++j)
                         {
-                            AVE_A = 0;
-
                             if (i + j <= 7)
                             {
-                                //
-                                //最初の７行はヘッダなので処理しない
-                                //
                             }
                             else if (i + j <= ComputeFilerow)
                             {
-                                if (double.TryParse(ComputeFile[i + j, stocknum], out d))
-                                {
-                                    AVE_A = AVE_A + Convert.ToDouble(ComputeFile[i + j, stocknum]);//株価//;
-                                    endofaveframe = endofaveframe + 1;
-                                }
-                                else
-                                {
-                                    //
-                                    //株価が空欄の場合は何もしない
-                                    //
-                                }
+                                AVE_B = AVE_B + Convert.ToDouble(ComputeFile[i + j, stocknum]);//株価//;
+                                endofaveframe = endofaveframe + 1;
                             }
                             else
                             {
-                                //
-                                //後ろ側の値がない区間に入ったら処理しない
-                                //
                             }
                         }
                         AVE_A = AVE_A / endofaveframe;
@@ -400,11 +350,11 @@ namespace _122_Analysis_StockRise
                         //
                         //前区間平均と後区間平均の割合を算出
                         //
-                        AVE_ratio = AVE_A / AVE_B;  //無限大になる場合あり
+                        AVE_ratio = AVE_A / AVE_B;
 
                         if(AVE_ratio >= 1 + (rise_fall_rate / 100))
                         {
-                            ListBox.Items.Add(ComputeFile[1, stocknum] +", " + ComputeFile[2, stocknum] + ", " + ComputeFile[i, 0] + ", " + ComputeFile[i, stocknum] + ", " + AVE_ratio);
+                            ListBox.Items.Add(ComputeFile[0, stocknum] +", " + ComputeFile[1, stocknum] + ", " + ComputeFile[i, 0] + ", " + ComputeFile[i, stocknum] + ", " + AVE_ratio);
                             stockrisingcount = stockrisingcount + 1;
                             //
                             //書き出し
@@ -422,6 +372,59 @@ namespace _122_Analysis_StockRise
                     }
                 }
             }
+
+            /*
+            //
+            //データプロット
+            //
+            Form2 form2 = new Form2();
+            form2.Show();
+
+            for (int i = 1; i < 6; i++)
+            {
+                if (fileOKNG[i] == 1)
+                {
+                    if (days_count[i] < 240)
+                    {
+                        days_count[i] = max_days_count_file;
+                    }
+                    else
+                    {
+
+                    }
+
+                    for (int j = 8; j <= days_count[i]; j++)
+                    {
+                        plot[i, 1, j] = (j - 8) / (days_count[i] - 10);
+                        if (String.IsNullOrEmpty(Plot_file_cont[i, j, plot_stock_num_int]))
+                        {
+                            plot[i, 2, j] = plot[i, 2, (j - 1)];
+                            //plot[i, 2, j] = Convert.ToDouble(Plot_file_cont[i, (j - 1), plot_stock_num_int]);
+
+                            //listBox1.Items.Add("431行目 plot[i, 1, j] = " + plot[i, 1, j] + ", plot[i, 2, j] = " + plot[i, 2, j] + ", ");
+                        }
+                        else
+                        {
+                            plot[i, 2, j] = Convert.ToDouble(Plot_file_cont[i, j, plot_stock_num_int]);
+
+                            //listBox1.Items.Add("437行目 plot[i, 1, j] = " + plot[i, 1, j] + ", plot[i, 2, j] = " + plot[i, 2, j] + ", ");
+                        }
+
+                        //listBox1.Items.Add("407行目 days_count[i] = " + days_count[i] + ", i =" + i + ", j = " + j + ", ");
+                        //listBox1.Items.Add("408行目 plot[i, 1, j] = " + plot[i, 1, j] + " , plot[i, 2, j] = " + plot[i, 2, j] + ", ");
+
+                        //listBox1.Items.Add("443行目 max_days_count_file = " + max_days_count_file + ", ");
+                        //listBox1.Items.Add("444行目 days_count[i] = " + days_count[i] + ", ");
+                    }
+                    form2.Form2_plot(plot, (days_count[i] - 8), Plot_file_cont[1, 1, plot_stock_num_int], Plot_file_cont[1, 2, plot_stock_num_int], fileOKNG);
+                }
+                else
+                {
+
+                }
+            }
+            */
+
         }
 
         private void Quit_Button_Click(object sender, EventArgs e)
@@ -514,11 +517,6 @@ namespace _122_Analysis_StockRise
 
         private void Rise_and_Fall_Rate_label_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Rise_and_Fall_Rate_Box_TextChanged(object sender, EventArgs e)
-        {
             rise_fall_rate = Convert.ToDouble(Rise_and_Fall_Rate_Box.Text);
         }
 
@@ -531,6 +529,5 @@ namespace _122_Analysis_StockRise
         {
             ave_frame = Convert.ToInt32(Ave_frames_Box.Text);
         }
-
     }
 }

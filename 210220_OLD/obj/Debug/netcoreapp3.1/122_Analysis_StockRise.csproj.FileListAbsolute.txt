@@ -1,0 +1,28 @@
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\bin\Debug\netcoreapp3.1\122_Analysis_StockRise.exe
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\bin\Debug\netcoreapp3.1\122_Analysis_StockRise.deps.json
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\bin\Debug\netcoreapp3.1\122_Analysis_StockRise.runtimeconfig.json
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\bin\Debug\netcoreapp3.1\122_Analysis_StockRise.runtimeconfig.dev.json
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\bin\Debug\netcoreapp3.1\122_Analysis_StockRise.dll
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\bin\Debug\netcoreapp3.1\122_Analysis_StockRise.pdb
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.csprojAssemblyReference.cache
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\_122_Analysis_StockRise.騰落率分析.resources
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.csproj.GenerateResource.cache
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.AssemblyInfoInputs.cache
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.AssemblyInfo.cs
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.csproj.CoreCompileInputs.cache
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.dll
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.pdb
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.genruntimeconfig.cache
+C:\Data\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.csprojAssemblyReference.cache
+C:\Data\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\WindowsFormsApplication2.Form2.resources
+C:\Data\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\_122_Analysis_StockRise.騰落率分析.resources
+C:\Data\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.csproj.GenerateResource.cache
+C:\Data\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.AssemblyInfoInputs.cache
+C:\Data\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.AssemblyInfo.cs
+C:\Data\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.csproj.CoreCompileInputs.cache
+C:\Data\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.dll
+C:\Data\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\122_Analysis_StockRise.pdb
+C:\Data\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\_122_Analysis_StockRise.Analysis_StrockRise.resources
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\_122_Analysis_StockRise.Analysis_StrockRise.resources
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\WindowsFormsApplication2.Form2.resources
+D:\Manabu MyDocuments\OneDrive\Source\200_GitHub\122_騰落率分析\Analysis_Stock_Rising\obj\Debug\netcoreapp3.1\_122_Analysis_StockRise.Form2.resources

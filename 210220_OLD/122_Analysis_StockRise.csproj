@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="210220_OLD\**" />
-    <EmbeddedResource Remove="210220_OLD\**" />
-    <None Remove="210220_OLD\**" />
+    <Folder Include="System\Windows\Forms\" />
   </ItemGroup>
 
 </Project>
